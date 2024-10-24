@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:item_code",
+ "creation": "2024-09-27 12:22:07.721585",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_section",
+  "item_code",
+  "item_name",
+  "opening_section",
+  "opening_quantity",
+  "opening_valuation_rate",
+  "opening_warehouse",
+  "description_section",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "length": 8,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "length": 50,
+   "reqd": 1
+  },
+  {
+   "fieldname": "opening_quantity",
+   "fieldtype": "Int",
+   "label": "Opening Quantity",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "opening_warehouse",
+   "fieldtype": "Link",
+   "label": "Opening Warehouse",
+   "options": "Warehouse",
+   "set_only_once": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "item_section",
+   "fieldtype": "Section Break",
+   "label": "Item"
+  },
+  {
+   "fieldname": "opening_section",
+   "fieldtype": "Section Break",
+   "label": "Opening"
+  },
+  {
+   "fieldname": "opening_valuation_rate",
+   "fieldtype": "Float",
+   "label": "Opening Valuation Rate",
+   "non_negative": 1,
+   "precision": "2",
+   "set_only_once": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-14 16:00:26.306697",
+ "modified_by": "Administrator",
+ "module": "Inventory",
+ "name": "Items",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "item_name"
+}

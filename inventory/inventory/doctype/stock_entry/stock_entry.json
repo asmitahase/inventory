@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SE.####",
+ "creation": "2024-09-27 11:02:43.958163",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_mro5",
+  "entry_type",
+  "valuation_method",
+  "amended_from",
+  "column_break_oaae",
+  "posting_date",
+  "posting_time",
+  "section_break_bcrm",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_mro5",
+   "fieldtype": "Section Break",
+   "label": "Entry"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Stock Entry",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Transfer",
+   "fieldname": "entry_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Entry Type",
+   "options": "Receive\nConsume\nTransfer",
+   "reqd": 1
+  },
+  {
+   "default": "Moving Average",
+   "fieldname": "valuation_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Valuation Method",
+   "options": "Moving Average\nFIFO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_oaae",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Posting Date",
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "in_standard_filter": 1,
+   "label": "Posting Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Stock Entry Item"
+  },
+  {
+   "fieldname": "section_break_bcrm",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-10-23 11:54:59.513069",
+ "modified_by": "Administrator",
+ "module": "Inventory",
+ "name": "Stock Entry",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
